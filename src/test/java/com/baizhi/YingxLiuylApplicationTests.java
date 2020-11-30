@@ -15,7 +15,7 @@ import java.util.List;
 @SpringBootTest//test测试类
 class YingxLiuylApplicationTests {
 
-    @Autowired
+    @Autowired//注解
     private AdminService adminService;
     @Autowired
     private CategoryDao categoryDao;
