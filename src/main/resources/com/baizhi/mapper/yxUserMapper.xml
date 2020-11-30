@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "http://mybatis.org/dtd/mybatis-3-mapper.dtd" "mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.dao.YxUserDao">
+    <select id="showAll" resultType="com.baizhi.entity.YxUser">
+        select * from yx_user
+        limit #{start},#{rows}
+    </select>
+
+    <!--    条数  -->
+    <select id="count" resultType="long">
+        select count(id) from yx_user
+    </select>
+
+    <!--    修改状态   -->
+    <update id="updateStatus" parameterType="string">
+        update yx_user set start=#{start}
+        where id=#{id}
+    </update>
+
+
+    <!--    导出查所有   -->
+    <select id="findAll" resultType="com.baizhi.entity.YxUser" >
+        select * from yx_user
+    </select>
+
+
+</mapper>
