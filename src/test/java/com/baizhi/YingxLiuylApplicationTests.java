@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-@SpringBootTest
+@SpringBootTest//test测试类
 class YingxLiuylApplicationTests {
 
     @Autowired
